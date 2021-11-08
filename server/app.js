@@ -9,6 +9,8 @@ const cors = require('cors');
 
 const empRouter = require('./routes/employees')
 const actionRouter = require('./routes/action_items')
+const feedbackRouter = require('./routes/feedbacks')
+const meetingRouter=require('./routes/meetings')
 
 const app = express();
 
@@ -21,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/employees', empRouter);
 app.use('/action-items', actionRouter);
+app.use('/feedbacks', feedbackRouter);
+app.use('/meetings',meetingRouter)
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));

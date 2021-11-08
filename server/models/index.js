@@ -13,5 +13,7 @@ db.sequelize = sequelize;
 
 db.Employees = require("./employees.js")(sequelize, Sequelize);
 db.Action_items = require("./action_items.js")(sequelize, Sequelize);
+db.Feedbacks = require("./feedbacks.js")(sequelize, Sequelize);
+db.Meetings = require("./meetings.js")(sequelize, Sequelize);
 
 module.exports = db;
