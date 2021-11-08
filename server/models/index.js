@@ -12,5 +12,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.Employees = require("./employees.js")(sequelize, Sequelize);
+db.Action_items = require("./action_items.js")(sequelize, Sequelize);
 
 module.exports = db;
